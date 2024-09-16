@@ -1,0 +1,140 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+:root{
+      --bg: rgb(175, 10, 38);
+      --hover: rgb(247, 7, 47);
+}
+
+body {
+      background-color: pink;
+}
+
+.parent-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+}
+
+/* amplop */
+.kotak {
+      background-color: #fff;
+      padding: 50px;
+      height: 200px;
+      position: relative;
+      box-shadow: 6px 6px 6px black;
+}
+
+
+.kotak::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(0 0, 100% 0, 50% 50%);
+      background-color: rgb(247, 7, 47);
+}
+#buka{
+      position: relative;
+      transform: translate(80%, 200%);
+      border-radius: 10px;
+      border: none;
+      background-color: red;
+      color: #fff;
+      padding: 10px;
+      transition: 0.3s ease;
+}
+@media (max-width: 576px){
+      #buka{
+            position: relative;
+            transform: translate(70%, 200%);
+      }
+}
+#buka:hover{
+      box-shadow: 0 0 20px var(--bg);
+      transition: 0.3s ease;
+}
+/* akhir amplop */
+/* form */
+#form{
+      background-color:  rgb(247, 7, 47);
+      padding: 30px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      text-align: center;
+}
+#sub-form label, #sub-form input{
+      margin: 20px 0;
+}
+#sub-form input{
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 1.3rem;
+}
+#sub-form label{
+      font-size: 1.3rem;
+      color: #fff;
+}
+#sub-form button{
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 4px 4px 4px black;
+      transition: 0.3s ease;
+}
+#sub-form button:hover{
+      background-color: var(--hover);
+      transition: 0.3s ease;
+}
+#sub-form button:active{
+      box-shadow: none;
+      transition: 0.3s ease;
+}
+/* akhir form */
+
+/* hasil */
+#hasil{
+      margin-top: 15px;
+      color: #fff;
+      font-size: 2rem;
+}
+/* akhir hasil */
+
+/* footer */
+footer p{
+      background-color: var(--bg);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.3rem;
+}
+footer{
+      bottom: 0;
+}
+footer p a{
+      text-decoration: none;
+      background-color: red;
+      color: white;
+      font-weight: bold;
+      padding: 10px;
+      transition: 0.3s ease;
+}
+footer p a:hover{
+      background-color: rgb(173, 1, 1);
+      box-shadow: 0 0 15px red;
+      transform: translateY(-50px);
+      transition: 0.3s ease;
+}
+@media (max-width: 576px){
+      footer p{
+            font-size: 1rem;
+      }
+}
+/*akhir footer */
+
+
+
